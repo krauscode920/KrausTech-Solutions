@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Kraus Tech Solutions - Custom AI/ML Architecture & Agent Development">
+    <title>About | Kraus Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: 
+                linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%),
+                radial-gradient(circle at 50% 30%, rgba(0, 255, 65, 0.1) 0%, transparent 50%);
+        }
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+        .about-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border: 1px solid var(--color-medium-gray);
+            background: var(--color-dark-gray);
+        }
+        .about-section h2 {
+            border-bottom: 2px solid var(--color-lime);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .principle-card {
+            padding: 1.5rem;
+            border: 1px solid var(--color-lime);
+            background: rgba(0, 255, 65, 0.05);
+        }
+        .principle-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+        .principle-card p {
+            color: var(--color-gray-text);
+            font-size: 0.95rem;
+        }
+        .tech-philosophy ul li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--color-medium-gray);
+        }
+        .tech-philosophy ul li:last-child {
+            border-bottom: none;
+        }
+        .tech-philosophy ul li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--color-lime);
+            font-size: 0.8rem;
+        }
+        .tech-philosophy ul li strong {
+            color: var(--color-lime);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">KRAUS TECH SOLUTIONS</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="cta-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Built by Someone Who Knows<br>How It Actually Works</h1>
+            <p class="hero-subtitle">No black boxes. No hand-waving. Just rigorous ML engineering.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Who We Are -->
+            <div class="about-section">
+                <h2>Who We Are</h2>
+                <p>
+                    Kraus Tech Solutions is a specialized machine learning consultancy focused on custom AI/ML architecture and intelligent agent development. We exist because too many businesses get sold cookie-cutter ML solutions that don't fit their actual problems.
+                </p>
+                <p>
+                    We're not a massive consultancy that over-engineers everything. We're not a dev shop that slaps together pre-trained models. We're technical specialists who understand ML from first principles and build exactly what your business needs—nothing more, nothing less.
+                </p>
+                <p>
+                    <strong>Our differentiator?</strong> We've built a deep learning framework from scratch. We understand transformers, LSTM architectures, and gradient descent at the implementation level. When we design your ML system, we know exactly what's happening under the hood.
+                </p>
+            </div>
+
+            <!-- What We Believe -->
+            <div class="about-section">
+                <h2>What We Believe</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <h3>ML Should Solve Real Problems</h3>
+                        <p>Not every problem needs machine learning. We'll tell you honestly if a simpler solution makes more sense.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Custom > Off-the-Shelf</h3>
+                        <p>Your data is unique. Your problem is unique. Generic solutions rarely capture the full value.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Architecture Matters</h3>
+                        <p>Good ML isn't just about algorithms—it's about data pipelines, feature engineering, and system design.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Data-Driven Decisions</h3>
+                        <p>Every technical choice should be backed by empirical evidence, not trends or hype.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Deployment Is Part of the Job</h3>
+                        <p>A model in a Jupyter notebook isn't done. We build production-ready systems.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Transparent Communication</h3>
+                        <p>Technical but understandable. No jargon for jargon's sake. Clear explanations of what we're building and why.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Philosophy -->
+            <div class="about-section tech-philosophy">
+                <h2>Technical Philosophy</h2>
+                <p>How we approach ML problems:</p>
+                <ul>
+                    <li>
+                        <strong>Start with the Business Problem</strong>
+                        We don't lead with "let's use transformers" or "we should try reinforcement learning." We start with: what are you trying to achieve? What decision are you trying to make better? What process are you trying to automate?
+                    </li>
+                    <li>
+                        <strong>Understand the Data First</strong>
+                        Before building any model, we dive deep into your data: its quality, its biases, its limitations. Most ML failures happen because of data problems, not algorithm problems.
+                    </li>
+                    <li>
+                        <strong>Right-Sized Solutions</strong>
+                        We don't over-engineer. A well-designed Random Forest often beats a poorly implemented neural network. Use the simplest model that solves the problem effectively.
+                    </li>
+                    <li>
+                        <strong>Build for Maintainability</strong>
+                        ML systems need to be retrained, monitored, and updated. We design systems that your team can actually maintain and improve.
+                    </li>
+                    <li>
+                        <strong>Measure Everything</strong>
+                        Clear metrics, rigorous evaluation, and honest reporting of limitations. If a model doesn't meet the bar, we say so.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Our Approach -->
+            <div class="about-section">
+                <h2>Our Approach to Projects</h2>
+                <p><strong>Discovery & Assessment</strong></p>
+                <p style="color: var(--color-gray-text); margin-bottom: 1.5rem;">
+                    We start by understanding your problem deeply. Not just what you think you need, but what you're actually trying to accomplish. Sometimes that means recommending against ML. Sometimes it means a different approach than you expected.
+                </p>
+
+                <p><strong>Data Analysis & Strategy</strong></p>
+                <p style="color: var(--color-gray-text); margin-bottom: 1.5rem;">
+                    Before touching any code, we analyze your data situation. What do you have? What's missing? What can we realistically achieve? This phase prevents expensive failures later.
+                </p>
+
+                <p><strong>Iterative Development</strong></p>
+                <p style="color: var(--color-gray-text); margin-bottom: 1.5rem;">
+                    We build in stages with regular check-ins. You see progress continuously, not just at the end. This keeps projects aligned and prevents scope creep.
+                </p>
+
+                <p><strong>Deployment & Documentation</strong></p>
+                <p style="color: var(--color-gray-text); margin-bottom: 1.5rem;">
+                    We deliver production-ready code with clear documentation. You should be able to understand, maintain, and extend what we build.
+                </p>
+            </div>
+
+            <!-- Why Us -->
+            <div class="about-section">
+                <h2>Why Work With Us</h2>
+                <p><strong>Deep Technical Expertise</strong></p>
+                <p style="color: var(--color-gray-text);">
+                    We've built ML systems from scratch—literally. Our custom deep learning framework (YFlow) demonstrates understanding at the implementation level, not just API level.
+                </p>
+
+                <p style="margin-top: 1.5rem;"><strong>Business-Focused</strong></p>
+                <p style="color: var(--color-gray-text);">
+                    We care about ROI, not research papers. Our case studies show real revenue impact ($600K+), real accuracy improvements (87%), and real time savings (70%).
+                </p>
+
+                <p style="margin-top: 1.5rem;"><strong>Modern AI Stack</strong></p>
+                <p style="color: var(--color-gray-text);">
+                    We work with cutting-edge tools: RAG systems, AI agents, MCP integration, LLM fine-tuning. We stay current because ML moves fast.
+                </p>
+
+                <p style="margin-top: 1.5rem;"><strong>Honest Communication</strong></p>
+                <p style="color: var(--color-gray-text);">
+                    No sales BS. No overpromising. We'll tell you what's realistic, what's not, and why. Technical credibility built on transparency.
+                </p>
+
+                <p style="margin-top: 1.5rem;"><strong>Right-Sized for Your Needs</strong></p>
+                <p style="color: var(--color-gray-text);">
+                    Our $1000 minimum makes us accessible to startups. Our expertise makes us valuable to established companies. We scale to your needs.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin-top: 3rem; padding: 3rem 2rem; background: rgba(0, 255, 65, 0.05); border: 1px solid var(--color-lime);">
+                <h2 style="margin-bottom: 1rem;">Let's Talk About Your ML Problem</h2>
+                <p style="color: var(--color-gray-text); margin-bottom: 2rem;">
+                    Free 15-minute discovery call. No commitment. Just honest technical discussion.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-large">Schedule Discovery Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KRAUS TECH SOLUTIONS</h3>
+                    <p>Custom AI/ML Architecture & Agent Development</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="index.html#services">Custom ML Architecture</a></li>
+                            <li><a href="index.html#services">AI Agent Development</a></li>
+                            <li><a href="index.html#services">Data Processing</a></li>
+                            <li><a href="index.html#services">ML Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case-studies.html">Case Studies</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kraus Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

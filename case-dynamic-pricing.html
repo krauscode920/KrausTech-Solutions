@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dynamic Pricing Engine Case Study - $600K+ Revenue Impact">
+    <title>Dynamic Pricing Engine | Kraus Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .case-detail {
+            padding: 6rem 0 4rem;
+        }
+        .case-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .case-hero .case-label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 255, 65, 0.1);
+            color: var(--color-lime);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .case-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid var(--color-medium-gray);
+            background: var(--color-dark-gray);
+        }
+        .case-section h2 {
+            border-bottom: 2px solid var(--color-lime);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .metric-box {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid var(--color-lime);
+            background: rgba(0, 255, 65, 0.05);
+        }
+        .metric-box .number {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--color-lime);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .metric-box .label {
+            color: var(--color-gray-text);
+            font-size: 0.9rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-lime);
+            color: var(--color-lime);
+            font-size: 0.85rem;
+            background: rgba(0, 255, 65, 0.05);
+        }
+        .key-features ul li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .key-features ul li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--color-lime);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">KRAUS TECH SOLUTIONS</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="cta-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Detail -->
+    <section class="case-detail">
+        <div class="container">
+            <div class="case-hero">
+                <div class="case-label">Revenue Optimization</div>
+                <h1>Dynamic Pricing Engine</h1>
+                <p class="hero-subtitle">ML-powered pricing system demonstrating $600K+ annual revenue impact</p>
+            </div>
+
+            <div class="case-content">
+                <!-- Purpose Section -->
+                <div class="case-section">
+                    <h2>Purpose</h2>
+                    <p>
+                        Mountain Peak Bike Rentals operated with fixed pricing, leaving significant revenue on the table during high-demand periods while struggling to maintain bookings during slower times. The challenge was to implement an intelligent pricing system that could:
+                    </p>
+                    <ul class="key-features">
+                        <li>Maximize revenue during peak demand without losing customers</li>
+                        <li>Maintain competitive pricing during off-peak periods</li>
+                        <li>Respond to real-time market conditions (weather, day of week, seasonality)</li>
+                        <li>Balance fleet utilization across different bike types</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Business Goal:</strong> Transform from reactive, fixed pricing to proactive, data-driven revenue optimization that captures market willingness to pay while maintaining customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- How Section -->
+                <div class="case-section">
+                    <h2>How</h2>
+                    
+                    <h3>1. Data Collection & Feature Engineering</h3>
+                    <p>Built a comprehensive dataset incorporating:</p>
+                    <ul class="key-features">
+                        <li>Historical booking patterns (2+ years of data)</li>
+                        <li>Weather conditions (temperature, precipitation, cloud cover)</li>
+                        <li>Seasonal indicators (peak, shoulder, off-season)</li>
+                        <li>Day of week and time-based features</li>
+                        <li>Real-time fleet capacity utilization</li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">2. Machine Learning Architecture</h3>
+                    <p>Implemented separate Random Forest models for each bike type:</p>
+                    <ul class="key-features">
+                        <li><strong>Mountain Bike Model:</strong> Optimized for $20-$80 price range</li>
+                        <li><strong>E-Bike Model:</strong> Calibrated for $30-$120 range</li>
+                        <li><strong>100 decision trees per model</strong> for robust predictions</li>
+                        <li><strong>Feature importance analysis</strong> identified top pricing drivers</li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">3. Business Intelligence Dashboard</h3>
+                    <p>Created an interactive Streamlit dashboard providing:</p>
+                    <ul class="key-features">
+                        <li>Real-time price recommendations based on current conditions</li>
+                        <li>Revenue impact projections vs fixed pricing</li>
+                        <li>Seasonal and weather-based analytics</li>
+                        <li>Scenario planning tools for strategy testing</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Plotly</span>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="case-section">
+                    <h2>Results</h2>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="number">$607K</span>
+                            <span class="label">Additional Annual Revenue</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="number">+50.3%</span>
+                            <span class="label">Revenue Increase</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="number">$830+</span>
+                            <span class="label">Avg Daily Increase</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="number">+63%</span>
+                            <span class="label">Partly Cloudy Day Revenue</span>
+                        </div>
+                    </div>
+
+                    <h3>Key Performance Insights</h3>
+                    <ul class="key-features">
+                        <li><strong>Weather Optimization:</strong> Sunny days saw 48% revenue increases; system automatically reduced prices during poor weather to maintain bookings</li>
+                        <li><strong>Seasonal Intelligence:</strong> Peak season pricing maximized revenue while off-season remained competitive</li>
+                        <li><strong>Capacity Management:</strong> 90%+ utilization triggered premium pricing, low demand applied strategic discounts</li>
+                        <li><strong>Model Accuracy:</strong> MAE of $1.32-$1.70 for price predictions across both bike types</li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">Business Impact</h3>
+                    <p>
+                        The dynamic pricing system transformed revenue economics without requiring additional fleet investment or operational changes. The $607K annual increase represents a 50.3% improvement over fixed pricing, with the system paying for itself within the first week of implementation.
+                    </p>
+                    <p>
+                        Perhaps most importantly, the system provided <strong>data-driven confidence</strong> in pricing decisions, eliminating guesswork and enabling proactive revenue management.
+                    </p>
+                </div>
+
+                <!-- CTA -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem;">Need a similar solution?</h3>
+                    <p style="color: var(--color-gray-text); margin-bottom: 2rem;">
+                        Let's discuss how dynamic pricing or predictive analytics could impact your business.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">Schedule Discovery Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KRAUS TECH SOLUTIONS</h3>
+                    <p>Custom AI/ML Architecture & Agent Development</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Case Studies</h4>
+                        <ul>
+                            <li><a href="case-dynamic-pricing.html">Dynamic Pricing Engine</a></li>
+                            <li><a href="case-churn-prediction.html">Customer Churn Prediction</a></li>
+                            <li><a href="case-content-moderation.html">AI Content Moderation</a></li>
+                            <li><a href="case-yflow.html">YFlow Framework</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case-studies.html">All Case Studies</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kraus Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
