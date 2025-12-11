@@ -116,22 +116,6 @@
             color: var(--color-gray-text);
             font-size: 0.9rem;
         }
-        .form-status {
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 4px;
-            display: none;
-        }
-        .form-status.success {
-            background: rgba(0, 255, 65, 0.1);
-            border: 1px solid var(--color-lime);
-            color: var(--color-lime);
-        }
-        .form-status.error {
-            background: rgba(255, 0, 0, 0.1);
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            color: #ff6b6b;
-        }
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -232,8 +216,6 @@
                         Fill out the form below and we'll get back to you within 24-48 hours.
                     </p>
 
-                    <div id="form-status" class="form-status"></div>
-
                     <form id="contact-form" action="https://formspree.io/f/mrbnynvl" method="POST">
                         <div class="form-group">
                             <label for="name">Name *</label>
@@ -283,10 +265,11 @@
                         <!-- Honeypot for spam protection -->
                         <input type="text" name="_gotcha" style="display:none">
                         
-                        <!-- Hidden fields -->
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - Kraus Tech">
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Kraus Tech Solutions">
+                        <input type="hidden" name="_next" value="https://krauscode920.github.io/KrausTech/contact.html?success=true">
 
-                        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
 
                     <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-gray-text);">
@@ -387,39 +370,20 @@
 
     <script src="script.js"></script>
     <script>
-        // Form submission handling
-        const form = document.getElementById('contact-form');
-        const statusDiv = document.getElementById('form-status');
-        const submitBtn = document.getElementById('submit-btn');
-
-        form.addEventListener('submit', async function(e) {
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Check minimum budget validation
-            if (data['inquiry_type'] === 'project' && data['budget'] === 'consultation') {
-                e.preventDefault();
-                statusDiv.className = 'form-status error';
-                statusDiv.style.display = 'block';
-                statusDiv.textContent = 'For project inquiries, our minimum is $1000. Please select "Extended Consultation" if you\'re looking for advisory services only.';
-                return;
-            }
-            
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            statusDiv.style.display = 'none';
-        });
-
-        // Handle Formspree response
+        // Simple success message handler
         window.addEventListener('load', function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('success') === 'true') {
-                statusDiv.className = 'form-status success';
-                statusDiv.style.display = 'block';
-                statusDiv.textContent = 'Thank you! Your message has been sent. We\'ll respond within 24-48 hours.';
-                form.reset();
+                alert('✅ Thank you! Your message has been sent successfully.\n\nWe\'ll respond to ' + (localStorage.getItem('formEmail') || 'your email') + ' within 24-48 hours.');
+                // Clean URL
+                window.history.replaceState({}, document.title, window.location.pathname);
             }
+        });
+
+        // Store email before submission for success message
+        document.getElementById('contact-form').addEventListener('submit', function() {
+            const email = document.getElementById('email').value;
+            localStorage.setItem('formEmail', email);
         });
     </script>
 </body>
