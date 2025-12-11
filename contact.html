@@ -216,7 +216,7 @@
                         Fill out the form below and we'll get back to you within 24-48 hours.
                     </p>
 
-                    <form id="contact-form" action="https://formspree.io/f/mrbnynvl" method="POST">
+                    <form action="https://formspree.io/f/mrbnynvl" method="POST">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -224,7 +224,7 @@
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="_replyto" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
@@ -234,7 +234,7 @@
 
                         <div class="form-group">
                             <label for="inquiry-type">Inquiry Type *</label>
-                            <select id="inquiry-type" name="inquiry_type" required>
+                            <select id="inquiry-type" name="inquiry-type" required>
                                 <option value="">Select an option</option>
                                 <option value="discovery">Free Discovery Call</option>
                                 <option value="consultation">Extended Consultation ($100)</option>
@@ -262,12 +262,8 @@
                             <textarea id="message" name="message" required placeholder="Tell us about your ML problem, data situation, and what you're hoping to achieve..."></textarea>
                         </div>
 
-                        <!-- Honeypot for spam protection -->
+                        <input type="hidden" name="_subject" value="New Inquiry - Kraus Tech Solutions">
                         <input type="text" name="_gotcha" style="display:none">
-                        
-                        <!-- Hidden fields for Formspree -->
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - Kraus Tech Solutions">
-                        <input type="hidden" name="_next" value="https://krauscode920.github.io/KrausTech/contact.html?success=true">
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
@@ -369,22 +365,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Simple success message handler
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                alert('✅ Thank you! Your message has been sent successfully.\n\nWe\'ll respond to ' + (localStorage.getItem('formEmail') || 'your email') + ' within 24-48 hours.');
-                // Clean URL
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }
-        });
-
-        // Store email before submission for success message
-        document.getElementById('contact-form').addEventListener('submit', function() {
-            const email = document.getElementById('email').value;
-            localStorage.setItem('formEmail', email);
-        });
-    </script>
 </body>
 </html>
