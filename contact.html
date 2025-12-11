@@ -192,15 +192,15 @@
                     <div class="contact-methods">
                         <div class="contact-method">
                             <strong>Email</strong>
-                            <a href="/cdn-cgi/l/email-protection#d8bbb7b6acb9bbac98b3aab9adabacbdbbb0abb7b4adacb1b7b6abf6bbb7b5"><span class="__cf_email__" data-cfemail="51323e3f25303225113a2330242225343239223e3d2425383e3f227f323e3c">[email&#160;protected]</span></a>
+                            <a href="mailto:sidkraus920@gmail.com">sidkraus920@gmail.com</a>
                         </div>
                         <div class="contact-method">
                             <strong>LinkedIn</strong>
-                            <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect on LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/sid-k-b73958145/" target="_blank">Connect on LinkedIn</a>
                         </div>
                         <div class="contact-method">
                             <strong>GitHub</strong>
-                            <a href="https://github.com/yourusername" target="_blank">View Our Work</a>
+                            <a href="https://github.com/emperorsid920/Python-AI" target="_blank">View Our Work</a>
                         </div>
                         <div class="contact-method">
                             <strong>Response Time</strong>
@@ -216,7 +216,7 @@
                         Fill out the form below and we'll get back to you within 24-48 hours.
                     </p>
 
-                    <form id="contact-form" action="https://formspree.io/f/sidkraus920@gmail.com" method="POST">
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -224,7 +224,7 @@
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="_replyto" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
@@ -234,7 +234,7 @@
 
                         <div class="form-group">
                             <label for="inquiry-type">Inquiry Type *</label>
-                            <select id="inquiry-type" name="inquiry_type" required>
+                            <select id="inquiry-type" name="inquiry-type" required>
                                 <option value="">Select an option</option>
                                 <option value="discovery">Free Discovery Call</option>
                                 <option value="consultation">Extended Consultation ($100)</option>
@@ -278,12 +278,10 @@
                     Prefer to skip the form? Book a time that works for you.
                 </p>
                 <!-- Replace this with your actual Calendly embed -->
-                <a href="https://calendly.com/yourname/discovery-call" target="_blank" class="btn btn-primary btn-large">
+                <a href="https://calendly.com/sidkraus920/discovery-call" target="_blank" class="btn btn-primary btn-large">
                     Schedule on Calendly
                 </a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-gray-text);">
-                    Integration with your actual Calendly account coming soon
-                </p>
+                
             </div>
         </div>
     </section>
@@ -367,22 +365,24 @@
 
     <script src="script.js"></script>
     <script>
-        // Enhanced form handling with budget validation
+        // Enhanced form handling
         document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Check minimum budget for project inquiries
-            if (data['inquiry_type'] === 'project' && data['budget'] === 'consultation') {
-                e.preventDefault();
+            // Check minimum budget
+            if (data['inquiry-type'] === 'project' && data['budget'] === 'consultation') {
                 alert('For project inquiries, our minimum is $1000. Please select "Extended Consultation" if you\'re looking for advisory services only.');
-                return false;
+                return;
             }
             
-            // Let Formspree handle the actual submission
-            // User will be redirected to a Formspree confirmation page
+            // In production, send to your backend
+            console.log('Form submitted:', data);
+            alert('Thank you for reaching out! We\'ll respond within 24-48 hours.\n\n(This is a demo - integrate with your form backend)');
+            this.reset();
         });
     </script>
 </body>
 </html>
-            // In production, send to your b
